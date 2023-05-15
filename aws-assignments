@@ -13,3 +13,4 @@ RDS Creation.
 4. Opened traffic rules to connect to db from ec2(updated security groups in both places-db and ec2 side)
 5. Install mysql DB on the instance and successfully run the mysql command to connect mySQL or aws RDS
 6. Created DB using sql command, use it, created a table called employee and inserted data into it.
+7. After creating RDS/mySQL observred that we can't change VPC but there is a option to change subnets under actions.
