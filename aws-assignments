@@ -1,0 +1,15 @@
+ec2-creation.
+1. Created a group using IAM called awsadmin and gave ec2 full access.
+2. Created a user called adminuser and added/assigned to the awsadmin group. 
+3. Logged into AWS using newly created user and created ec2 instance(Amazon Linux)
+4. Connected successfully using .pem file
+5. Created new EBS and attached to the instance
+6. Finally deleted the instance and observed wheter data disk is deleted.
+
+RDS Creation.
+1. created RDS service and have choosen MySQL database using standard create.
+2. Selected db.t2.micro as the type
+3. Created ec2 instance to connect the db from this.
+4. Opened traffic rules to connect to db from ec2(updated security groups in both places-db and ec2 side)
+5. Install mysql DB on the instance and successfully run the mysql command to connect mySQL or aws RDS
+6. Created DB using sql command, use it, created a table called employee and inserted data into it.
