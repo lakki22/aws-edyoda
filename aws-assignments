@@ -1,4 +1,4 @@
-ec2-creation.
+ec2-creation:
 1. Created a group using IAM called awsadmin and gave ec2 full access.
 2. Created a user called adminuser and added/assigned to the awsadmin group. 
 3. Logged into AWS using newly created user and created ec2 instance(Amazon Linux)
@@ -6,7 +6,7 @@ ec2-creation.
 5. Created new EBS and attached to the instance
 6. Finally deleted the instance and observed wheter data disk is deleted.
 
-RDS Creation.
+RDS Creation:
 1. created RDS service and have choosen MySQL database using standard create.
 2. Selected db.t2.micro as the type
 3. Created ec2 instance to connect the db from this.
@@ -14,3 +14,13 @@ RDS Creation.
 5. Install mysql DB on the instance and successfully run the mysql command to connect mySQL or aws RDS
 6. Created DB using sql command, use it, created a table called employee and inserted data into it.
 7. After creating RDS/mySQL observred that we can't change VPC but there is a option to change subnets under actions.
+
+AWS Organizations:
+1. Created an AWS account and navigate to AWS Organizations.
+2. Created 2 OUs(QA and DevOps)
+3. Invited 2 aws members
+4. Moved one member to QA OU and another to DevOps OU
+5. Created 2 policies(ec2-readonly & s3-readonly) to deny creating resources.
+6. ec2-readonly attached to one member and s3-readonly attached to another member.
+7. Verified that one member not able to create ec2 and other not able to create s3.
+Note: The above 2 members have full access individually.
